@@ -12,11 +12,33 @@
     </header>
     <main>
       <section>
-        <p>Questa è la mia prima pagina scritta in HTML5!!</p>
+        <h2>I miei hobby</h2>
+        <ul>
+          <li>Leggere libri</li>
+          <li>Fare escursioni</li>
+          <li>Programmare</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Contattami</h2>
+        <form>
+          <label for="name"> Nome:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email"> Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Messaggio:</label>
+          <textarea id="message" neme="messagge" required></textarea>
+
+          <button type="submit">Invia</button>
+        </form>
       </section>
     </main>
     <footer>
       <p>Copyright @ 2024</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
