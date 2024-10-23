@@ -29,3 +29,18 @@ footer {
   padding: 20px;
   background-color: #ddd;
 }
+
+p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+p.success {
+  color: green;
+  font-weight: bold;
+}
+
+p.error {
+  color: red;
+  font-weight: bold;
+}
