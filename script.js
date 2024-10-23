@@ -18,23 +18,17 @@ form.addEventListener("submit", function (event) {
   // validazione personalizzata: controlliamo che i campi non siano vuoti
   if (!userName || !userEmail || !userMessage) {
     messageSection.textContent = `Tutti i campi sono obbligatori.`;
-    messageSection.classList.remove("success");
-    messageSection.classList.add("error");
+    messageSection.classList.remove("success"); // modifica lo stile
+    messageSection.classList.add("error"); // modifica lo stile
   } else {
     // se tutto è corretto mostriamo un messaggio di conferma
     messageSection.textContent = `Grazie ${userName} per averci contattato, ti risponderemo presto via mail a ${userEmail}.`;
-    messageSection.classList.remove("error");
-    messageSection.classList.add("success");
+    messageSection.classList.remove("error"); // modifica lo stile
+    messageSection.classList.add("success"); // modifica lo stile
 
     // opzionale, resetta i campi del form
-    form.reset;
+    form.reset();
   }
-
-  // // creiamo un messaggio personalizzato
-  // const message = `Grazie ${userName} per averci contattato!`;
-
-  // // aggiungiamo il messaggio al DOM
-  // messageSection.textContent = message;
 });
 
 /* aggiungi l'elemento p come figlio del form */
