@@ -6,6 +6,12 @@ const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
 const messageSection = document.createElement("p"); // creiamo un elemento <p> per il messaggio
 
+// validazione email
+function validateEmail(userEmail) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(userEmail);
+}
+
 // inserisce un event listener al pulsante di invio
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // previene il comportamento di defalt del form, cioè ricaricare la pagina
@@ -18,6 +24,12 @@ form.addEventListener("submit", function (event) {
   // validazione personalizzata: controlliamo che i campi non siano vuoti
   if (!userName || !userEmail || !userMessage) {
     messageSection.textContent = `Tutti i campi sono obbligatori.`;
+    messageSection.classList.remove("success"); // modifica lo stile
+    messageSection.classList.add("error"); // modifica lo stile
+  }
+  // validazione dell'email
+  else if (!validateEmail(userEmail)) {
+    messageSection.textContent = "Per favore inserire una email valida.";
     messageSection.classList.remove("success"); // modifica lo stile
     messageSection.classList.add("error"); // modifica lo stile
   } else {
