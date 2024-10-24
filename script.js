@@ -38,12 +38,13 @@ function handleInputValidation(input, validationFn) {
 
 //validazione del nome (lunghezza minima)
 function validateName(userName) {
-  return userName.length > 2; // nome di almeno 3 caratteri
+  const nameRegex = /^[a-zA-ZÀ-ÿ\s'-]+$/; // controllo che il nome non abbia numeri, caratteri speciali, accetta lettere, spazi, apostrofi e trattini
+  return userName.length > 2 && nameRegex.test(userName); // nome di almeno 3 caratteri
 }
 
 // validazione dei messaggi
 function validateMessage(userMessage) {
-  return userMessage.length > 5; // messaggio di almneo 6 caratteri
+  return userMessage.trim().length > 5; // messaggio di almneo 6 caratteri e che non sia solo spazi vuoti
 }
 
 // validazione in tempo reale
