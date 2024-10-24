@@ -29,9 +29,28 @@ function handleInputValidation(input, validationFn) {
     if (validationFn(input.value.trim())) {
       input.classList.remove("error");
       input.classList.add("success");
+    } else {
+      input.classList.remove("success");
+      input.classList.add("error");
     }
   });
 }
+
+//validazione del nome (lunghezza minima)
+function validateName(userName) {
+  return userName.length > 2; // nome di almeno 3 caratteri
+}
+
+// validazione dei messaggi
+function validateMessage(userMessage) {
+  return userMessage.length > 5; // messaggio di almneo 6 caratteri
+}
+
+// validazione in tempo reale
+handleInputValidation(nameInput, validateName);
+handleInputValidation(emailInput, validateEmail);
+handleInputValidation(messageInput, validateMessage);
+
 // ------------- inserisce un event listener al pulsante di invio
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // previene il comportamento di default del form che è quello di ricaricare la pagina
