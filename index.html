@@ -32,31 +32,35 @@
               type="text"
               id="name"
               name="name"
-              aria-label="Inserisci il tuo nome"
               class="error"
-              aria-labelledby="name-error"
+              aria-describedby="name-error"
             />
             <span id="name-error" class="visually-hidden"></span>
+            <p aria-live="polite" class="feedback-message"></p>
 
             <label for="email"> Email:</label>
             <input
               type="email"
               id="email"
               name="email"
-              aria-label="Inserisci la tua email"
               class="error"
-              aria-labelledby="email-error"
+              aria-describedby="email-error"
             />
             <span id="email-error" class="visually-hidden"></span>
+            <p aria-live="polite" class="=feedback-message"></p>
+
             <label for="message">Messaggio:</label>
             <textarea
               id="message"
               name="message"
-              aria-label="Inserisci il tuo messaggio"
               class="error"
-              aria-labelledby="message-error"
+              aria-describedby="message-error"
             ></textarea>
+            <!-- messaggio nascosto che fornisce feedback ai lettori di schermo -->
             <span id="message-error" class="visually-hidden"></span>
+            <!-- messaggio di feedback generale visibile -->
+            <p aria-live="polite" class="=feedback-message"></p>
+
             <button type="submit">Invia</button>
           </fieldset>
         </form>
