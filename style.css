@@ -30,6 +30,13 @@ footer {
   background-color: #ddd;
 }
 
+/* imposta il colore del bordo a quello iniziale per non interferire */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: initial;
+}
+
 p {
   font-size: 1.1rem;
   margin-top: 10px;
@@ -45,7 +52,7 @@ p.error {
   font-weight: bold;
 }
 
-error-message {
+.error-message {
   color: red;
   font-size: 0.9rem;
   margin-left: 10px;
@@ -60,9 +67,8 @@ textarea.success {
   border-color: green;
 }
 
-/* Stili per schermi più piccoli */
+/* -------------- Stili per schermi più piccoli ------------------------*/
 @media (max-width: 768px) {
-  /* Corretto qui */
   main {
     margin: 10px;
     padding: 15px;
