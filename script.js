@@ -22,8 +22,12 @@ form.addEventListener("submit", function (event) {
 
   if (!userName || !userEmail || !userMessage) {
     messageSection.textContent = `Tutti i campi sono obbligatori.`;
-    messageSection.classList.remove("success"); // modifica lo stile
-    messageSection.classList.add("error"); // modifica lo stile
+    messageSection.classList.remove("success");
+    messageSection.classList.add("error");
+  } else if (!validateEmail(userEmail)) {
+    messageSection.textContent = "Per favore inserire una email valida.";
+    messageSection.classList.remove("success");
+    messageSection.classList.add("error");
   } else {
     messageSection.textContent = `Grazie ${userName} per averci contattato, ti risponderemo presto via mail a ${userEmail}.`;
     messageSection.classList.remove("error");
