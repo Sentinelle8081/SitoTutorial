@@ -8,8 +8,7 @@ const messageSection = document.createElement("p"); // messaggio generale
 
 // validazione email
 function validateEmail(userEmail) {
-  const regex =
-    /^(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:a-zA-Z0-9?\.)+a-zA-Z0-9?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|[a-zA-Z0-9-]*[a-zA-Z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])?)\])/;
+  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return regex.test(userEmail);
 }
 
@@ -43,30 +42,28 @@ form.addEventListener("submit", function (event) {
   if (!userName) {
     showError(nameInput, "Il nome è obbligatorio.");
     formValid = false;
-    if (!userEmail) {
-      showError(emailInput, "L'email è obbligatoria.");
-    } else if (!validateEmail(userEmail)) {
-      showError(emailInput, "Per favore inserisci una email valida.");
-      formValid = false;
-    }
-    if (!userMessage) {
-      showError(messageInput, "Il messaggio è obbligatorio.");
-      formValid = false;
-    }
-    //messageSection.textContent = `Tutti i campi sono obbligatori.`;
-    // messageSection.classList.remove("success");
-    // messageSection.classList.add("error");
+  }
+  if (!userEmail) {
+    showError(emailInput, "L'email è obbligatoria.");
   } else if (!validateEmail(userEmail)) {
-    messageSection.textContent = "Per favore inserire una email valida.";
-    messageSection.classList.remove("success");
-    messageSection.classList.add("error");
-  } else {
+    showError(emailInput, "Per favore inserisci una email valida.");
+    formValid = false;
+  }
+  if (!userMessage) {
+    showError(messageInput, "Il messaggio è obbligatorio.");
+    formValid = false;
+  }
+  if (formValid) {
     messageSection.textContent = `Grazie ${userName} per averci contattato, ti risponderemo presto via mail a ${userEmail}.`;
     messageSection.classList.remove("error");
     messageSection.classList.add("success");
-
     // opzionale, resetta i campi del form
     form.reset();
+  } else {
+    messageSection.textContent =
+      "Ci sono errori nel modulo. Controlla e riprova.";
+    messageSection.classList.remove("success");
+    messageSection.classList.add("error");
   }
 });
 
