@@ -57,7 +57,9 @@ form.addEventListener("submit", function (event) {
   event.preventDefault(); // previene il comportamento di default del form che è quello di ricaricare la pagina
 
   // rimuove i vecchi messaggi di errore
-  document.querySelectorAll(".error-message").forEach((el) => el.remove());
+  document
+    .querySelectorAll(".error-message") // pulire il contenuto del messaggio di errore associato senza rimuovere l'elemento.
+    .forEach((el) => (el.textContent = ""));
 
   // otteniamo i valori degli input
   const userName = nameInput.value.trim();
@@ -88,6 +90,11 @@ form.addEventListener("submit", function (event) {
     messageSection.classList.add("success");
     // opzionale, resetta i campi del form
     form.reset();
+
+    // rimuovi classi error e success dai campi
+    nameInput.classList.remove("success", "error");
+    emailInput.classList.remove("success", "error");
+    messageInput.classList.remove("success", "error");
   } else {
     messageSection.textContent =
       "Ci sono errori nel modulo. Controlla e riprova.";
