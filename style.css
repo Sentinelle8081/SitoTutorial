@@ -45,6 +45,21 @@ p.error {
   font-weight: bold;
 }
 
+error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+input.error,
+textarea.error {
+  border-color: red;
+}
+
+input.success,
+textarea.success {
+  border-color: green;
+}
+
 /* Stili per schermi più piccoli */
 @media (max-width: 768px) {
   /* Corretto qui */
@@ -69,3 +84,4 @@ p.error {
     width: 100%;
   }
 }
+/* ----------------------------------------------------------------------- */
