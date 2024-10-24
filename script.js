@@ -56,7 +56,6 @@ handleInputValidation(messageInput, validateMessage);
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // previene il comportamento di default del form che è quello di ricaricare la pagina
 
-  // rimuove i vecchi messaggi di errore
   document
     .querySelectorAll(".error-message") // pulire il contenuto del messaggio di errore associato senza rimuovere l'elemento.
     .forEach((el) => (el.textContent = ""));

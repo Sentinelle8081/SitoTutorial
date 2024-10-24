@@ -24,6 +24,7 @@
       <section>
         <h2>Contattami</h2>
         <p id="form-message" aria-live="polite"></p>
+
         <form novalidate aria-labelledby="form-title">
           <fieldset>
             <legend>Inserisci i tuoi dati per contattarmi</legend>
@@ -35,6 +36,8 @@
               class="error"
               aria-describedby="name-error"
             />
+            <!-- con span creo lo spazio dove inserire il messaggio d'errore -->
+            <span class="error-message"></span>
             <span id="name-error" class="visually-hidden"></span>
             <p aria-live="polite" class="feedback-message"></p>
 
@@ -46,6 +49,7 @@
               class="error"
               aria-describedby="email-error"
             />
+            <span class="error-message"></span>
             <span id="email-error" class="visually-hidden"></span>
             <p aria-live="polite" class="=feedback-message"></p>
 
@@ -56,6 +60,7 @@
               class="error"
               aria-describedby="message-error"
             ></textarea>
+            <span class="error-message"></span>
             <!-- messaggio nascosto che fornisce feedback ai lettori di schermo -->
             <span id="message-error" class="visually-hidden"></span>
             <!-- messaggio di feedback generale visibile -->
