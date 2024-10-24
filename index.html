@@ -23,7 +23,8 @@
       <!-- Sezione del form -->
       <section>
         <h2>Contattami</h2>
-        <form novalidate>
+        <p id="form-message" aria-live="polite"></p>
+        <form novalidate aria-labelledby="form-title">
           <fieldset>
             <legend>Inserisci i tuoi dati per contattarmi</legend>
             <label for="name"> Nome:</label>
@@ -33,7 +34,9 @@
               name="name"
               aria-label="Inserisci il tuo nome"
               class="error"
+              aria-labelledby="name-error"
             />
+            <span id="name-error" class="visually-hidden"></span>
 
             <label for="email"> Email:</label>
             <input
@@ -42,16 +45,18 @@
               name="email"
               aria-label="Inserisci la tua email"
               class="error"
+              aria-labelledby="email-error"
             />
-
+            <span id="email-error" class="visually-hidden"></span>
             <label for="message">Messaggio:</label>
             <textarea
               id="message"
               name="message"
               aria-label="Inserisci il tuo messaggio"
               class="error"
+              aria-labelledby="message-error"
             ></textarea>
-
+            <span id="message-error" class="visually-hidden"></span>
             <button type="submit">Invia</button>
           </fieldset>
         </form>
