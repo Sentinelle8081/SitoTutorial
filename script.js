@@ -23,7 +23,16 @@ function showError(input, message) {
   errorElement.textContent = message;
 }
 
-// inserisce un event listener al pulsante di invio
+// Aggiunge classi dinamiche per validazione in tempo reale
+function handleInputValidation(input, validationFn) {
+  input.addEventListener("input", function () {
+    if (validationFn(input.value.trim())) {
+      input.classList.remove("error");
+      input.classList.add("success");
+    }
+  });
+}
+// ------------- inserisce un event listener al pulsante di invio
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // previene il comportamento di default del form che è quello di ricaricare la pagina
 
