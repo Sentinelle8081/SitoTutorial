@@ -66,21 +66,21 @@ form.addEventListener("submit", function (event) {
   // validazione personalizzata del form
   let formValid = true;
 
-  // controlliamo che i campi non siano vuoti
-  if (!userName) {
-    showError(nameInput, "Il nome è obbligatorio.");
+  // controllo dei campi
+  if (!validateName(userName)) {
+    showError(nameInput, "Il nome deve contenere almeno 3 caratteri");
     formValid = false;
   }
-  if (!userEmail) {
-    showError(emailInput, "L'email è obbligatoria.");
-  } else if (!validateEmail(userEmail)) {
-    showError(emailInput, "Per favore inserisci una email valida.");
+  if (!validateEmail(userEmail)) {
+    showError(emailInput, "Per favore inserisci una mail valida.");
     formValid = false;
   }
-  if (!userMessage) {
-    showError(messageInput, "Il messaggio è obbligatorio.");
+  if (!validateMessage(userMessage)) {
+    showError(messageInput, "Il messaggio deve contenere almeno 6 caratteri.");
     formValid = false;
   }
+
+  // mostra messaggio finale
   if (formValid) {
     messageSection.textContent = `Grazie ${userName} per averci contattato, ti risponderemo presto via mail a ${userEmail}.`;
     messageSection.classList.remove("error");
