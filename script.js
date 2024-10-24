@@ -37,13 +37,23 @@ form.addEventListener("submit", function (event) {
   const userMessage = messageInput.value.trim();
 
   // validazione personalizzata del form
-  let formValid = false;
+  let formValid = true;
 
   // controlliamo che i campi non siano vuoti
   if (!userName) {
     showError(nameInput, "Il nome è obbligatorio.");
-    // || !userEmail || !userMessage) {
-    // messageSection.textContent = `Tutti i campi sono obbligatori.`;
+    formValid = false;
+    if (!userEmail) {
+      showError(emailInput, "L'email è obbligatoria.");
+    } else if (!validateEmail(userEmail)) {
+      showError(emailInput, "Per favore inserisci una email valida.");
+      formValid = false;
+    }
+    if (!userMessage) {
+      showError(messageInput, "Il messaggio è obbligatorio.");
+      formValid = false;
+    }
+    //messageSection.textContent = `Tutti i campi sono obbligatori.`;
     // messageSection.classList.remove("success");
     // messageSection.classList.add("error");
   } else if (!validateEmail(userEmail)) {
