@@ -72,11 +72,13 @@ p.error {
 input.error,
 textarea.error {
   border-color: red;
+  background-color: #ffe6e6;
 }
 
 input.success,
 textarea.success {
   border-color: green;
+  background-color: #e6ffe6;
 }
 
 /* -------------- Stili per schermi più piccoli ------------------------*/
