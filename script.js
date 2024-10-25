@@ -18,13 +18,15 @@ function validateEmail(userEmail) {
 
 // funzione per mostrare messaggio di errore accanto a ciascun campo
 function showError(input, message) {
-  let errorElement = input.nextElementSibling; // cerca l'elemento accanto all'input
-  if (!errorElement || errorElement.tagName !== "SPAN") {
-    errorElement = document.createElement("span");
-    errorElement.classList.add("error-message");
-    input.insertAdjacentElement("afterend", errorElement);
-  }
+  const errorElement = document.querySelector(`#${input.id}-error`); // trova l'elemento HTML che visualizzerà il messaggio di errore
   errorElement.textContent = message;
+  errorElement.classList.remove("visually-hidden"); // mostra il messaggio
+}
+
+function clearError(input) {
+  const errorElement = document.querySelector(`#${input.id}-error`);
+  errorElement.textContent = "";
+  errorElement.classList.add("visually-hidden"); // nasconde il messaggio
 }
 
 // Aggiunge classi dinamiche per validazione in tempo reale
