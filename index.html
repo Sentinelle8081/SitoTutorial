@@ -39,9 +39,8 @@
               aria-describedby="name-error"
             />
             <!-- con span creo lo spazio dove inserire il messaggio d'errore -->
-            <span class="error-message"></span>
-            <span id="name-error" class="visually-hidden"></span>
-            <p aria-live="polite" class="feedback-message"></p>
+
+            <span id="name-error" class="error-message visually-hidden"></span>
 
             <label for="email"> Email:</label>
             <input
@@ -51,9 +50,8 @@
               class="error"
               aria-describedby="email-error"
             />
-            <span class="error-message"></span>
-            <span id="email-error" class="visually-hidden"></span>
-            <p aria-live="polite" class="=feedback-message"></p>
+
+            <span id="email-error" class="email-error visually-hidden"></span>
 
             <label for="message">Messaggio:</label>
             <textarea
@@ -62,11 +60,12 @@
               class="error"
               aria-describedby="message-error"
             ></textarea>
-            <span class="error-message"></span>
+
             <!-- messaggio nascosto che fornisce feedback ai lettori di schermo -->
-            <span id="message-error" class="visually-hidden"></span>
-            <!-- messaggio di feedback generale visibile -->
-            <p aria-live="polite" class="=feedback-message"></p>
+            <span
+              id="message-error"
+              class="message-error visually-hidden"
+            ></span>
 
             <button type="submit" id="invio">Invia</button>
           </fieldset>
