@@ -40,7 +40,9 @@ h1 {
 #greetButton:hover {
   background-color: #45a049;
 }
-
+#invio {
+  cursor: pointer;
+}
 /* stile per il contenuto principale */
 main {
   background-color: white;
