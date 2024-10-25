@@ -29,6 +29,12 @@ function clearError(input) {
   errorElement.classList.add("visually-hidden"); // nasconde il messaggio
 }
 
+function handlePlaceHolder(input, message) {
+  input.placeholder = message; // imposta il placeholder in caso di errore
+  setTimeout(() => {
+    input.placeholder = ""; // rimuove il messaggio di errore dopo qualche secondo
+  }, 3000); // il tempo può essere regolato
+}
 // Aggiunge classi dinamiche per validazione in tempo reale
 function handleInputValidation(input, validationFn) {
   input.addEventListener("input", function () {
