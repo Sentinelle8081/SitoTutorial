@@ -1,3 +1,7 @@
+document.getElementById("greetButton").addEventListener("click", function () {
+  alert("Benvenuto nel mio sito!");
+});
+
 // seleziona il form e aggiunge un event listener per l'invio
 
 const form = document.querySelector("form");

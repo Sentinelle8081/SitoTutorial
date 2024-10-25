@@ -8,10 +8,37 @@ body {
 
 /* stile per l'intestazione */
 header {
-  background-color: #4caf50;
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #444;
+  text-align: center;
+}
+
+#greetButton {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#greetButton:hover {
+  background-color: #45a049;
 }
 
 /* stile per il contenuto principale */
