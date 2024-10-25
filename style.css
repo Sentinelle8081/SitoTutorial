@@ -101,15 +101,22 @@ p.error {
 input.error,
 textarea.error {
   border-color: red;
-  background-color: #ffe6e6;
 }
 
 input.success,
 textarea.success {
   border-color: green;
-  background-color: #e6ffe6;
 }
 
+/* Cambia il colore del testo nel placeholder in base allo stato */
+input.error::placeholder,
+textarea.error::placeholder {
+  color: #ff6666;
+}
+
+input.success::placeholder textarea.success::placeholder {
+  color: #66cc66;
+}
 /* -------------- Stili per schermi più piccoli ------------------------*/
 @media (max-width: 768px) {
   main {
