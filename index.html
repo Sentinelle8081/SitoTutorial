@@ -25,9 +25,8 @@
       <!-- Sezione del form -->
       <section>
         <h2>Contattami</h2>
-        <p id="form-message" aria-live="polite"></p>
 
-        <form novalidate aria-labelledby="form-title">
+        <form novalidate>
           <fieldset>
             <legend>Inserisci i tuoi dati per contattarmi</legend>
             <label for="name"> Nome:</label>
@@ -37,6 +36,7 @@
               name="name"
               class="error"
               aria-describedby="name-error"
+              placeholder="Almeno 2 caratteri"
             />
             <!-- con span creo lo spazio dove inserire il messaggio d'errore -->
 
@@ -49,6 +49,7 @@
               name="email"
               class="error"
               aria-describedby="email-error"
+              placeholder="email valida"
             />
 
             <span id="email-error" class="email-error visually-hidden"></span>
@@ -59,6 +60,7 @@
               name="message"
               class="error"
               aria-describedby="message-error"
+              placeholder="Almeno 6 caratteri"
             ></textarea>
 
             <!-- messaggio nascosto che fornisce feedback ai lettori di schermo -->
