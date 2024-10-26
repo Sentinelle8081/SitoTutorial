@@ -17,7 +17,7 @@ const projectCard = document.querySelectorAll(".project-card"); // seleziono tut
 projectCard.forEach((card) => {
   card.addEventListener("click", function () {
     // ad ogni card aggiungo un eventListener sul click
-    const details = card.querySelector(".project-details");
+    const details = card.querySelector(".project-details"); // trova i dettagli all'interno della carta cliccata
 
     // alterna la visibilità
     if (details.style.display === "none" || details.style.display === "") {
