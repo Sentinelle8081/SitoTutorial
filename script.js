@@ -28,6 +28,16 @@ projectCard.forEach((card) => {
   });
 });
 
+// Espansione dei dettagli
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".toggle-btn").forEach((button) => {
+    button.addEventListener("click", function () {
+      const card = this.closest(".project-card"); // seleziona il progetto specifico
+      card.classList.toggle("active"); // aggiunge o rimuove la classe ".active"
+    });
+  });
+});
+
 // seleziona il form e aggiunge un event listener per l'invio
 
 const form = document.querySelector("form");

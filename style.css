@@ -48,6 +48,16 @@ h1 {
   transition: color 0.3s ease;
 }
 
+.project-details {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease; /* Transizione per espansione fluida */
+}
+
+.project-card.active .project-details {
+  max-height: 500px; /* Altezza massima dei dettagli visibili */
+}
+
 /* stile per il contenuto principale */
 main {
   background-color: white;
