@@ -43,6 +43,11 @@ h1 {
 #invio {
   cursor: pointer;
 }
+/* Durata di 0.3s con una transizione lineare */
+#aboutDescription {
+  transition: color 0.3s ease;
+}
+
 /* stile per il contenuto principale */
 main {
   background-color: white;

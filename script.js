@@ -6,10 +6,10 @@ document.getElementById("greetButton").addEventListener("click", function () {
 // creo animazione (cambio del colore) al passaggio del mouse sopra il paragrafo about
 const aboutDescription = document.getElementById("aboutDescription");
 aboutDescription.addEventListener("mouseover", function () {
-  aboutDescription.style.color = "blue";
+  aboutDescription.style.color = "blue"; // diventa blue quando il mouse è sopra la scritta
 });
 aboutDescription.addEventListener("mouseout", function () {
-  aboutDescription.style.color = "black";
+  aboutDescription.style.color = "black"; // torna al colore nero quando il mouse si toglie
 });
 
 // seleziona il form e aggiunge un event listener per l'invio
