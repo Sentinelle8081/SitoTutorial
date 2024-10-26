@@ -67,7 +67,9 @@
             />
             <!-- con span creo lo spazio dove inserire il messaggio d'errore -->
 
-            <span id="name-error" class="error-message visually-hidden"></span>
+            <span id="name-error" class="error-message visually-hidden"
+              >Deve contenere almeno due lettere</span
+            >
 
             <label for="email"> Email:</label>
             <input
@@ -79,7 +81,9 @@
               placeholder="La tua email"
             />
 
-            <span id="email-error" class="email-error visually-hidden"></span>
+            <span id="email-error" class="email-error visually-hidden"
+              >Inserisci email valida</span
+            >
 
             <label for="message">Messaggio:</label>
             <textarea
@@ -91,10 +95,9 @@
             ></textarea>
 
             <!-- messaggio nascosto che fornisce feedback ai lettori di schermo -->
-            <span
-              id="message-error"
-              class="message-error visually-hidden"
-            ></span>
+            <span id="message-error" class="message-error visually-hidden"
+              >Devi inserire almeno 6 caratteri</span
+            >
 
             <button type="submit" id="invio">Invia</button>
           </fieldset>
