@@ -1,5 +1,15 @@
+// inserisce un messaggio alert al bottone greetButton
 document.getElementById("greetButton").addEventListener("click", function () {
   alert("Benvenuto nel mio sito!");
+});
+
+// creo animazione (cambio del colore) al passaggio del mouse sopra il paragrafo about
+const aboutDescription = document.getElementById("aboutDescription");
+aboutDescription.addEventListener("mouseover", function () {
+  aboutDescription.style.color = "blue";
+});
+aboutDescription.addEventListener("mouseout", function () {
+  aboutDescription.style.color = "black";
 });
 
 // seleziona il form e aggiunge un event listener per l'invio
