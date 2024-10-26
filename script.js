@@ -12,6 +12,22 @@ aboutDescription.addEventListener("mouseout", function () {
   aboutDescription.style.color = "black"; // torna al colore nero quando il mouse si toglie
 });
 
+// seleziona tutte le carte progetto
+const projectCard = document.querySelectorAll(".project-card"); // seleziono tutti gli elementi con classe .project-card
+projectCard.forEach((card) => {
+  card.addEventListener("click", function () {
+    // ad ogni card aggiungo un eventListener sul click
+    const details = card.querySelector(".project-details");
+
+    // alterna la visibilità
+    if (details.style.display === "none" || details.style.display === "") {
+      details.style.display = "block";
+    } else {
+      details.style.display = "none";
+    }
+  });
+});
+
 // seleziona il form e aggiunge un event listener per l'invio
 
 const form = document.querySelector("form");
