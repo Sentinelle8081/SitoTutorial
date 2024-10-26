@@ -33,7 +33,7 @@ function handlePlaceHolder(input, message) {
   input.placeholder = message; // imposta il placeholder in caso di errore
   setTimeout(() => {
     input.placeholder = ""; // rimuove il messaggio di errore dopo qualche secondo
-  }, 3000); // il tempo può essere regolato
+  }, 7000); // il tempo può essere regolato
 }
 // Aggiunge classi dinamiche per validazione in tempo reale
 function handleInputValidation(input, validationFn) {
@@ -83,14 +83,17 @@ form.addEventListener("submit", function (event) {
   // controllo dei campi
   if (!validateName(userName)) {
     showError(nameInput, "Il nome deve contenere almeno 3 caratteri");
+    handlePlaceHolder(nameInput, "Errore nel nome!");
     formValid = false;
   }
   if (!validateEmail(userEmail)) {
     showError(emailInput, "Per favore inserisci una mail valida.");
+    handlePlaceHolder(emailInput, "Errore nella email!");
     formValid = false;
   }
   if (!validateMessage(userMessage)) {
     showError(messageInput, "Il messaggio deve contenere almeno 6 caratteri.");
+    handlePlaceHolder(messageInput, "Errore nel messaggio!");
     formValid = false;
   }
 
