@@ -8,25 +8,52 @@
   </head>
   <body>
     <header>
-      <h1>Benvenuto nel mio sito</h1>
+      <h1>Il mio portfolio</h1>
 
       <nav>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#testimonianze">Testimonianze</a>
+        <a href="#competenze">Competenze</a>
         <a href="#contattami">Contattami</a>
       </nav>
     </header>
 
     <main>
+      <!-- home section -->
       <section id="home">
-        <p>Questa è una zona introduttiva del sito</p>
-        <button id="greetButton">Saluta!</button>
+        <h2>Benvenuto!</h2>
+        <p>
+          Questa è la mia introduzione. Scopri i miei progetti e le competenze.
+        </p>
+        <button id="greetButton">Scopri di più!</button>
       </section>
-      <!-- Sezione del form -->
-      <section>
+
+      <!-- progetti section -->
+      <section id="progetti">
+        <h2>I miei progetti</h2>
+        <p>
+          Questa sezione mostrerà i miei progetti. (Esercizio in Javascript in
+          seguito)
+        </p>
+      </section>
+
+      <!-- testimonianze section -->
+      <section id="testimonianze">
+        <h2>Testimonianze</h2>
+        <p>Alcune recensioni da clienti e collaboratori (fittizie)</p>
+      </section>
+      <!-- competenze section -->
+      <section id="competenze">
+        <h2>Competenze</h2>
+        <p>Le mie competenze in vari linguaggi e strumenti</p>
+      </section>
+
+      <!-- contattami sezion -->
+      <section id="contattami">
         <h2>Contattami</h2>
 
-        <form novalidate>
+        <form id="contactForm" novalidate>
           <fieldset>
             <legend>Inserisci i tuoi dati per contattarmi</legend>
             <label for="name"> Nome:</label>
@@ -36,7 +63,7 @@
               name="name"
               class="error"
               aria-describedby="name-error"
-              placeholder="Almeno 2 caratteri"
+              placeholder="Il tuo nome"
             />
             <!-- con span creo lo spazio dove inserire il messaggio d'errore -->
 
@@ -49,7 +76,7 @@
               name="email"
               class="error"
               aria-describedby="email-error"
-              placeholder="email valida"
+              placeholder="La tua email"
             />
 
             <span id="email-error" class="email-error visually-hidden"></span>
@@ -60,7 +87,7 @@
               name="message"
               class="error"
               aria-describedby="message-error"
-              placeholder="Almeno 6 caratteri"
+              placeholder="Il tuo messaggio"
             ></textarea>
 
             <!-- messaggio nascosto che fornisce feedback ai lettori di schermo -->
@@ -75,7 +102,7 @@
       </section>
     </main>
     <footer>
-      <p>Copyright &copy; 2024</p>
+      <p>Copyright &copy; 2024 - Il mio portfolio interattivo</p>
     </footer>
     <script src="script.js"></script>
   </body>
