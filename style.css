@@ -101,6 +101,7 @@ p.error {
 input.error,
 textarea.error {
   border-color: red;
+  color: red;
 }
 
 input::placeholder {
@@ -109,6 +110,7 @@ input::placeholder {
 input.success,
 textarea.success {
   border-color: green;
+  color: green;
 }
 
 /* Cambia il colore del testo nel placeholder in base allo stato */
