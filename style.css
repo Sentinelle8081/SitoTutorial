@@ -60,7 +60,12 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leggera ombra */
   padding: 16px;
   margin-bottom: 16px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* transizione per effetto hover */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* sposta leggermente la scheda verso l'alto */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta l'ombra */
 }
 
 .project-card.active .project-details {
