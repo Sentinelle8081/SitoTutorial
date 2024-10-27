@@ -49,9 +49,11 @@ h1 {
 }
 
 .project-details {
+  opacity: 0;
+
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.5s ease; /* Transizione per espansione fluida */
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Transizione per espansione fluida */
 }
 
 .project-card {
@@ -70,6 +72,35 @@ h1 {
 
 .project-card.active .project-details {
   max-height: 500px; /* Altezza massima dei dettagli visibili */
+  opacity: 1; /* rende visibili i dettagli */
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.toggle-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* transizione per effetto hover */
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+.project-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.project-details p {
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 8px;
 }
 
 /* stile per il contenuto principale */
