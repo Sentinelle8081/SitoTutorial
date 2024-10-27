@@ -99,8 +99,31 @@ function validateMessage(userMessage) {
 handleInputValidation(nameInput, validateName);
 handleInputValidation(emailInput, validateEmail);
 handleInputValidation(messageInput, validateMessage);
+//---------------TESTIMONIANZE ------------------------------------------
 
-// ------------- inserisce un event listener al pulsante di invio
+let currentIndex = 0;
+const testimonials = document.querySelectorAll(".testimonials");
+
+function showTestimonial(index) {
+  testimonials.forEach((testimonail, i) => {
+    testimonail.classList.remove("active");
+    if (i === index) {
+      testimonail.classList.add("active");
+    }
+  });
+}
+
+function showNext() {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  showTestimonial(currentIndex);
+}
+function showPrev() {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(currentIndex);
+}
+
+setInterval(showNext, 5000);
+// ------------- FORM -------------------------inserisce un event listener al pulsante di invio
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // previene il comportamento di default del form che è quello di ricaricare la pagina
 
