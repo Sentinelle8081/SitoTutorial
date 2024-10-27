@@ -102,13 +102,13 @@ handleInputValidation(messageInput, validateMessage);
 //---------------TESTIMONIANZE ------------------------------------------
 
 let currentIndex = 0;
-const testimonials = document.querySelectorAll(".testimonials");
+const testimonials = document.querySelectorAll(".testimonial");
 
 function showTestimonial(index) {
-  testimonials.forEach((testimonail, i) => {
-    testimonail.classList.remove("active");
+  testimonials.forEach((testimonial, i) => {
+    testimonial.classList.remove("active");
     if (i === index) {
-      testimonail.classList.add("active");
+      testimonial.classList.add("active");
     }
   });
 }

@@ -65,6 +65,12 @@ h1 {
   transition: transform 0.3s ease; /* transizione per effetto hover */
 }
 
+.project-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
 .project-card:hover {
   transform: translateY(-5px); /* sposta leggermente la scheda verso l'alto */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta l'ombra */
@@ -90,19 +96,42 @@ h1 {
   background-color: #0056b3;
 }
 
-.project-card h3 {
-  font-size: 1.2em;
-  margin-bottom: 8px;
-  color: #333;
-}
-
 .project-details p {
   font-size: 0.9em;
   color: #555;
   line-height: 1.5;
   margin-top: 8px;
 }
+/* ------------------------- TESTIMONIANZE ---------------------------------------*/
+/* Contenitore generale */
+.testimonials-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+}
 
+/* Wrapper delle testimonianze*/
+.testimonials-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Ogni testimonianza*/
+.testimonial {
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* testimonianza attiva*/
+.testimonial.active {
+  opacity: 1; /* Mostra la testimonianza attiva */
+}
+
+/* ------------------------------------------------------------------------------ */
 /* stile per il contenuto principale */
 main {
   background-color: white;
