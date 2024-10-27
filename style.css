@@ -54,6 +54,15 @@ h1 {
   transition: max-height 0.5s ease; /* Transizione per espansione fluida */
 }
 
+.project-card {
+  background-color: #f8f9fa; /* colore di sfondo chiaro */
+  border-radius: 8px; /* bordo arrotondato */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
 .project-card.active .project-details {
   max-height: 500px; /* Altezza massima dei dettagli visibili */
 }
