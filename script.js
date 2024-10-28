@@ -12,33 +12,35 @@ aboutDescription.addEventListener("mouseout", function () {
   aboutDescription.style.color = "black"; // torna al colore nero quando il mouse si toglie
 });
 
-// seleziona tutte le carte progetto
-const projectCard = document.querySelectorAll(".project-card"); // seleziono tutti gli elementi con classe .project-card
-projectCard.forEach((card) => {
-  card.addEventListener("click", function () {
-    // ad ogni card aggiungo un eventListener sul click
-    const details = card.querySelector(".project-details"); // trova i dettagli all'interno della carta cliccata
+// ----------------------------CARDS ---------- carte progetto ---------------------------------------------
+// const projectCard = document.querySelectorAll(".project-card"); // seleziono tutti gli elementi con classe .project-card
+// projectCard.forEach((card) => {
+//   card.addEventListener("click", function () {
+//     // ad ogni card aggiungo un eventListener sul click
+//     const details = card.querySelector(".project-details"); // trova i dettagli all'interno della carta cliccata
 
-    // alterna la visibilità
-    if (details.style.display === "none" || details.style.display === "") {
-      details.style.display = "block";
-    } else {
-      details.style.display = "none";
-    }
-  });
-});
+//     // alterna la visibilità
+//     if (details.style.display === "none" || details.style.display === "") {
+//       details.style.display = "block";
+//     } else {
+//       details.style.display = "none";
+//     }
+//   });
+// });
 
-// Espansione dei dettagli
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".toggle-btn").forEach((button) => {
-    button.addEventListener("click", function () {
-      const card = this.closest(".project-card"); // seleziona il progetto specifico
-      card.classList.toggle("active"); // aggiunge o rimuove la classe ".active"
-    });
-  });
-});
+// // Espansione dei dettagli
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.querySelectorAll(".toggle-btn").forEach((button) => {
+//     button.addEventListener("click", function () {
+//       const card = this.closest(".project-card"); // seleziona il progetto specifico
+//       card.classList.toggle("active"); // aggiunge o rimuove la classe ".active"
+//     });
+//   });
+// });
 
-// seleziona il form e aggiunge un event listener per l'invio
+//------------------------------------ FILTRO -----------------------------------------------------------------------------------
+
+// --------FORM --------- seleziona il form e aggiunge un event listener per l'invio -------------------------------------------------
 
 const form = document.querySelector("form");
 const nameInput = document.querySelector("#name");

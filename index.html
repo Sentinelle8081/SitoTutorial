@@ -39,51 +39,40 @@
         </p>
       </section>
 
-      <!-- progetti section -->
+      <!----------------------- PROGETTI section ----------------------------------------->
       <section id="projects">
-        <h2>I miei progetti</h2>
-        <p>
-          Questa sezione mostrerà i miei progetti. (Esercizio in Javascript in
-          seguito)
-        </p>
-        <div class="project-grid">
-          <div class="project-card" id="project1">
-            <h3>Progetto 1</h3>
-            <button class="toggle-btn" onclick="toggleDetails()">
-              Mostra dettagli
-            </button>
-            <div class="project-details">
-              <p>Questo progetto riguarda...</p>
-            </div>
-          </div>
+        <h2>Progetti in evidenza</h2>
+        <div class="filter">
+          <button onclick="filterProject('all')">Tutti</button>
+          <button onclick="filterProject('HTML')">HTML</button>
+          <button onclick="filterProject('CSS')">CSS</button>
+          <button onclick="filterProject('JavaScript')">JavaScript</button>
+        </div>
 
-          <div class="project-card" id="project2">
-            <h3>Progetto 2</h3>
-            <button class="toggle-btn" onclick="toggleDetails()">
-              Mostra dettagli
-            </button>
-            <div class="project-details">
-              <p>Questo progetto riguarda...</p>
-            </div>
+        <div class="projects-container">
+          <div class="project" data-category="HTML">
+            <h3>Progetto HTML</h3>
+            <p>Descrizione del progetto HTML</p>
           </div>
-
-          <div class="project-card" id="project3">
-            <h3>Progetto 3</h3>
-            <button class="toggle-btn" onclick="toggleDetails()">
-              Mostra dettagli
-            </button>
-            <div class="project-details">
-              <p>Questo progetto riguarda...</p>
-            </div>
+          <div class="project" data-category="CSS">
+            <h3>Progetto CSS</h3>
+            <p>Descrizione del progetto CSS</p>
+          </div>
+          <div class="project" data-category="JavaScript">
+            <h3>Progetto JavaScript</h3>
+            <p>Descrizione del progetto JavaScript</p>
+          </div>
+          <div class="project" data-category="HTML CSS">
+            <h3>Progetto HTML CSS</h3>
+            <p>Descrizione del progetto HTML CSS</p>
           </div>
         </div>
       </section>
 
       <!-- testimonianze section -->
       <section id="testimonianze">
-        <p>Alcune recensioni da clienti e collaboratori (fittizie)</p>
         <div class="testimonials-container">
-          <h2>Testimonianze</h2>
+          <h2>Testimonianze (fittizie)</h2>
           <div class="testimonials-wrapper">
             <div class="testimonial">
               <p>Esperienza fantastica, personale professionale e gentile.</p>
