@@ -116,19 +116,12 @@ h1 {
 /* Wrapper delle testimonianze*/
 .testimonials-wrapper {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 1.5s ease;
 }
 
 /* Ogni testimonianza*/
 .testimonial {
-  min-width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-/* testimonianza attiva*/
-.testimonial.active {
-  opacity: 1; /* Mostra la testimonianza attiva */
+  min-width: 100%; /* Ognio testimonianza prende l'intera larghezza del contenitore */
 }
 
 /* ------------------------------------------------------------------------------ */

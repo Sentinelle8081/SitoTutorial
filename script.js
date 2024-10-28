@@ -102,27 +102,27 @@ handleInputValidation(messageInput, validateMessage);
 //---------------TESTIMONIANZE ------------------------------------------
 
 let currentIndex = 0;
-const testimonials = document.querySelectorAll(".testimonial");
+const testimonialsWrapper = document.querySelector(".testimonials-wrapper");
+const totalTestimonials = document.querySelectorAll(".testimonial").length;
 
 function showTestimonial(index) {
-  testimonials.forEach((testimonial, i) => {
-    testimonial.classList.remove("active");
-    if (i === index) {
-      testimonial.classList.add("active");
-    }
-  });
+  const offset = -index * 100; // Calcola l'offset in base all’indice
+  testimonialsWrapper.style.transform = `translateX(${offset}%)`; // Trasforma il wrapper
 }
 
 function showNext() {
-  currentIndex = (currentIndex + 1) % testimonials.length;
-  showTestimonial(currentIndex);
-}
-function showPrev() {
-  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  currentIndex = (currentIndex + 1) % totalTestimonials; // Incrementa e resetta l’indice
   showTestimonial(currentIndex);
 }
 
+function showPrev() {
+  currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials; // Decrementa e resetta l’indice
+  showTestimonial(currentIndex);
+}
+
+// Cambio automatico ogni 5 secondi
 setInterval(showNext, 5000);
+
 // ------------- FORM -------------------------inserisce un event listener al pulsante di invio
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // previene il comportamento di default del form che è quello di ricaricare la pagina

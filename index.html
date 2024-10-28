@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>Il mio portfolio</h1>
+      <h1>Il mio sito tutorial</h1>
 
       <nav>
         <a href="#home">Home</a>
@@ -30,8 +30,7 @@
       </section>
 
       <!-- about section -->
-      <!-- TODO: aggiungere qualche interattività come effetti di testo 
-       al passaggio del mouse o un’animazione per mostrare progressivamente le informazioni. -->
+      <!-- TODO: aggiungere un’animazione per mostrare progressivamente le informazioni. -->
       <section id="about">
         <h2>Chi sono</h2>
         <p id="aboutDescription">
@@ -86,7 +85,7 @@
         <div class="testimonials-container">
           <h2>Testimonianze</h2>
           <div class="testimonials-wrapper">
-            <div class="testimonial active">
+            <div class="testimonial">
               <p>Esperienza fantastica, personale professionale e gentile.</p>
               <h4>- Roberto Martini</h4>
             </div>
@@ -101,9 +100,9 @@
               <h4>- Giuseppe Verdi</h4>
             </div>
           </div>
+          <button class="prev-btn" onclick="showPrev()">&#10094;</button>
+          <button class="next-btn" onclick="showNext()">&#10095;</button>
         </div>
-        <button class="prev-btn" onclick="showPrev()">&#10094;</button>
-        <button class="next-btn" onclick="showNext()">&#10095;</button>
       </section>
 
       <!-- competenze section -->
